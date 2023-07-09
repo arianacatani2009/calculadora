@@ -1,6 +1,9 @@
+import javax.swing.*;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Metodos {
+    public JPanel panel;
     private String cadena;
     private double resultado;
     private boolean suma;
@@ -16,6 +19,8 @@ public class Metodos {
     private boolean cosecante;
     private boolean alcuadrado;
     private boolean alapotencia;
+    private boolean borrar;
+    private boolean borrarto;
     public Metodos(){
         cadena="";
         suma=false;
@@ -31,6 +36,9 @@ public class Metodos {
         cosecante=false;
         alcuadrado=false;
         alapotencia=false;
+        borrar=false;
+        borrarto=false;
+        JPanel panel1 = panel;
     }
     public String concatenamiento(String cadena){
         this.cadena=this.cadena+cadena;
@@ -134,8 +142,8 @@ public class Metodos {
         } else if (alcuadrado==true) {
         resultado=Math.pow(resultado,2);
         } else if (alapotencia==true) {
-            double secante=Math.toRadians(resultado);
-            resultado=Math.pow(resultado,Double.parseDouble(numero));
+            double secante = Math.toRadians(resultado);
+            resultado = Math.pow(resultado, Double.parseDouble(numero));
         }
         suma=false;
         resta=false;
@@ -150,6 +158,17 @@ public class Metodos {
         cosecante=false;
         alcuadrado=false;
         alapotencia=false;
+        borrar=false;
+        borrarto=false;
+        JPanel panel1 = panel;
         return resultado;
+        
+    }
+    public static void main (String[]args){
+        JFrame frame = new JFrame("Calculadora");
+        frame.setContentPane(new Calculadora().panel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
     }
     }

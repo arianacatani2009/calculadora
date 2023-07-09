@@ -2,8 +2,38 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Calculadora extends javax.swing.JFrame{
-    Metodos metodox=new Metodos();
+public class Calculadora extends javax.swing.JFrame {
+    private JTextField txt;
+    JPanel panel;
+    private JButton boton_7;
+    private JButton boton_5;
+    private JButton boton_9;
+    private JButton boton_igual;
+    private JButton boton_6;
+    private JButton boton_0;
+    private JButton boton_8;
+    private JButton boton_2;
+    private JButton boton_4;
+    private JButton boton_1;
+    private JButton boton_suma;
+    private JButton boton_resta;
+    private JButton boton_multiplicacion;
+    private JButton boton_divicion;
+    private JButton boton_sin;
+    private JButton boton_cos;
+    private JButton boton_tan;
+    private JButton boton_raiz;
+    private JButton boton_cot;
+    private JButton boton_secante;
+    private JButton boton_cosc;
+    private JButton boton_cuadrado;
+    private JButton boton_potencia;
+    private JButton boton_3;
+    private JButton boton_punto;
+    private JButton boton_borrar;
+    private JButton boton_borrato;
+    Metodos metodox = new Metodos();
+
     public Calculadora() {
 
         this.setLocationRelativeTo(null);
@@ -162,41 +192,18 @@ public class Calculadora extends javax.swing.JFrame{
                 metodox.alapotencia(txt.getText());
             }
         });
-        public static void main (String[]args){
-            JFrame frame = new JFrame("Calculadora");
-            frame.setContentPane(new Calculadora().panel);
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.pack();
-            frame.setVisible(true);
-        }
-    }
 
-    private JTextField txt;
-    private JPanel panel;
-    private JButton boton_7;
-    private JButton boton_5;
-    private JButton button4;
-    private JButton boton_9;
-    private JButton boton_igual;
-    private JButton boton_6;
-    private JButton boton_0;
-    private JButton boton_8;
-    private JButton boton_2;
-    private JButton boton_4;
-    private JButton boton_1;
-    private JButton boton_suma;
-    private JButton boton_resta;
-    private JButton boton_multiplicacion;
-    private JButton boton_divicion;
-    private JButton boton_sin;
-    private JButton boton_cos;
-    private JButton boton_tan;
-    private JButton boton_raiz;
-    private JButton boton_cot;
-    private JButton boton_secante;
-    private JButton boton_cosc;
-    private JButton boton_cuadrado;
-    private JButton boton_potencia;
-    private JButton boton_3;
-    private JButton boton_punto;
+        boton_borrar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                txt.setText("0");
+            }
+        });
+        boton_borrato.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            }
+        });
+
+    }
 }
