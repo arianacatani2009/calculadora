@@ -202,6 +202,7 @@ public class Calculadora extends javax.swing.JFrame {
         boton_borrato.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                txt.setText(" ");
             }
         });
 
